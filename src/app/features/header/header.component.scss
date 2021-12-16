@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10%;
+  align-items: center;
+  background: #222;
+  font-size: 1.5rem;
+  nav {
+    ul {
+      li {
+        display: inline-block;
+        padding: 20px;
+        a {
+          color: #fff;
+        }
+        a:hover {
+          color: aqua;
+        }
+      }
+    }
+  }
+}
