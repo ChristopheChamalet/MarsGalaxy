@@ -2,6 +2,23 @@
   <app-header></app-header>
 </header>
 
-<h1>Liste des photos par jour</h1>
+<section>
+  <div class="contact-form-container">
+    <form action="#">
+      <h1 class="underline">Changez la date</h1>
+      <label class="my-20" for="name">Jour</label>
+      <input type="number" name="day" id="day" [(ngModel)]="dateJour"/>
+      <label class="my-20" for="name">Mois</label>
+      <input type="number" name="month" id="month"[(ngModel)]="dateMonth" />
+      <label class="my-20" for="name">Année</label>
+      <input type="number" name="year" id="year"[(ngModel)]="dateYear"  />
+      <button class="btn btn-dark my-20">CHANGEZ</button>
+    </form>
+  </div>
+</section>
 
 <app-list-images [marsPhotos]="marsPhotos"></app-list-images>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

@@ -8,12 +8,7 @@ import { MarsImagesService } from '../../core/services/mars-images.service';
   styleUrls: ['./list-images-items.component.scss'],
 })
 export class ListImagesItemsComponent implements OnInit {
-  @Input() id: string | undefined;
-  @Input() img_src: string | undefined;
-  @Input() sol: number | undefined;
-  @Input() cameras: string[] | undefined;
-  @Input() earth_date: Date | undefined;
-
+  @Input() photosMars: any = {};
   constructor() {}
 
   ngOnInit(): void {}
