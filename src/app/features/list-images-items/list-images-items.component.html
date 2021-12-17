@@ -1,1 +1,3 @@
-<img src="{{ img_src }}" alt="" />
+<img class="img" src="{{ photosMars.img_src }}" alt="" />
+<ng-container *ngIf="(afficherButton)"><button class="btn"
+           (click) ="clickToAdd()">Ajout galerie</button></ng-container>

@@ -8,15 +8,11 @@ import { PhotosPerDayComponent } from '../../pages/photos-per-day/photos-per-day
   styleUrls: ['./list-images.component.scss'],
 })
 export class ListImagesComponent implements OnInit {
-  @Input() marsPhotos: {
-    id: string;
-    img_src: string;
-    sol: number;
-    cameras: string[];
-    earth_date: Date;
-  }[] = [];
+  @Input() marsPhotos = [];
 
   constructor(private PhotosPerDaysComponent: PhotosPerDayComponent) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.marsPhotos);
+  }
 }

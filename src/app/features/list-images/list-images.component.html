@@ -1,4 +1,5 @@
-<app-list-images-items
-  *ngFor="let img of marsPhotos"
-  [img_src]="img.img_src"
-></app-list-images-items>
+<ng-container *ngIf="marsPhotos.length > 0">
+  <li class="container" *ngFor="let photosMars of marsPhotos">
+    <app-list-images-items [photosMars]="photosMars"></app-list-images-items>
+  </li>
+</ng-container>

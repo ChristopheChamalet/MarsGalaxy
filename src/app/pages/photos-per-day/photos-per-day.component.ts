@@ -7,13 +7,20 @@ import { MarsImagesService } from 'src/app/core/services/mars-images.service';
   styleUrls: ['./photos-per-day.component.scss'],
 })
 export class PhotosPerDayComponent implements OnInit {
-  marsPhotos: any;
   constructor(private MarsImagesService: MarsImagesService) {
     this.MarsImagesService = MarsImagesService;
   }
-
+  marsPhotos = [];
   ngOnInit(): void {
-    this.marsPhotos = this.MarsImagesService.getMarsImagesFromAPI();
-    console.log(this.marsPhotos);
+    this.MarsImagesService.getMarsImagesFromAPI().subscribe(
+      (res) => {
+        this.marsPhotos = res.photos;
+        console.log(res.photos);
+      },
+
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

@@ -2,4 +2,10 @@
   <app-header></app-header>
 </header>
 
-<p>galerie works!</p>
+<h4>Voici la gallerie d'image </h4>
+<ng-container *ngIf="listItem.length != 0">
+  <li class="container" *ngFor="let photosMars of listItem">
+    <app-list-images-items [photosMars]="photosMars" [afficherButton]="afficherButton"></app-list-images-items>
+  </li>
+</ng-container>
+
