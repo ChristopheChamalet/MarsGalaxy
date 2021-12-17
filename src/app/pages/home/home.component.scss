@@ -1,0 +1,82 @@
+.vp {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../assets/img/getoffmars.jpeg) center center/cover;
+}
+.vp-content {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+}
+
+.vp-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.vp-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.vp-content p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+.contact {
+  padding: 18px 0px 10px 0px;
+  min-height: 100vh;
+}
+
+.underline {
+  padding-bottom: 10px;
+  text-align: center;
+}
+.btn-primary {
+  background: white;
+  color: #222;
+}
+.btn-primary:hover {
+  background: #222;
+  color: white;
+}
+
+.btn-dark {
+  background: #222;
+  color: white;
+}
+.btn-dark:hover {
+  background: white;
+  color: #222;
+  border: 1px solid #222;
+}
+.btn {
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.groupe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 70px auto 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .equipe {
+    width: 300px;
+    padding: 10px 10px 10px 10px;
+    height: 300px;
+    overflow: hidden;
+  }
+}

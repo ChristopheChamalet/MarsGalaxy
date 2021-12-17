@@ -7,12 +7,12 @@
     <form action="#">
       <h1 class="underline">Changez la date</h1>
       <label class="my-20" for="name">Jour</label>
-      <input type="number" name="day" id="day" [(ngModel)]="dateJour"/>
+      <input type="number" name="day" id="day" [(ngModel)]="dateJour" />
       <label class="my-20" for="name">Mois</label>
-      <input type="number" name="month" id="month"[(ngModel)]="dateMonth" />
+      <input type="number" name="month" id="month" [(ngModel)]="dateMonth" />
       <label class="my-20" for="name">Année</label>
-      <input type="number" name="year" id="year"[(ngModel)]="dateYear"  />
-      <button class="btn btn-dark my-20">CHANGEZ</button>
+      <input type="number" name="year" id="year" [(ngModel)]="dateYear" />
+      <button class="btn btn-dark my-20" (click)="dateChange()">CHANGEZ</button>
     </form>
   </div>
 </section>

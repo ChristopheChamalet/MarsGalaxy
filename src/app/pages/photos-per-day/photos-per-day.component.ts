@@ -15,8 +15,28 @@ export class PhotosPerDayComponent implements OnInit {
   dateMonth: string | undefined;
   dateYear: string | undefined;
 
-
   ngOnInit(): void {
+    this.dateJour = this.MarsImagesService.getDateJour();
+    this.dateMonth = this.MarsImagesService.getDateMonth();
+    this.dateYear = this.MarsImagesService.getDateYear();
+
+    this.MarsImagesService.getMarsImagesFromAPI().subscribe(
+      (res) => {
+        this.marsPhotos = res.photos;
+        console.log(res.photos);
+      },
+
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  dateChange() {
+    this.MarsImagesService.changerDate(
+      this.dateJour,
+      this.dateMonth,
+      this.dateYear
+    );
     this.MarsImagesService.getMarsImagesFromAPI().subscribe(
       (res) => {
         this.marsPhotos = res.photos;
